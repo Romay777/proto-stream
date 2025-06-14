@@ -1,0 +1,31 @@
+.main-screen {
+  position: fixed;
+  top: 50px; /* Отступ сверху */
+  right: 245px; /* Привязка к правой части экрана */
+  width: calc(100vw - 330px - 245px + 75px); /* Ширина контейнера */
+  max-width: calc(100vw - 330px - 245px + 75px);
+  height: calc(100vh - 50px); /* Высота минус отступ сверху */
+  background: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Включаем прокрутку */
+}
+
+.video-player {
+  width: 100%; /* Ширина равна ширине родительского контейнера */
+  height: 800px; /* Высота автоматически подстраивается под контент */
+  background: var(--light-secondary-color);
+  flex-shrink: 0; /* Чтобы элемент не сжимался */
+}
+
+.main-screen p {
+  margin: 10px 0; /* Добавляем отступы для параграфов */
+}
+
+
+.streamer-info {
+  width: 100%; /* Ширина равна ширине родительского контейнера */
+  height: 110px; /* Высота автоматически подстраивается под контент */
+  background: var(--dark-color);
+  flex-shrink: 0; /* Чтобы элемент не сжимался */
+}

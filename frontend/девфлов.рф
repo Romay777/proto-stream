@@ -1,0 +1,27 @@
+server {
+    listen 80;
+    server_name девфлов.рф www.девфлов.рф;
+
+    location / {
+        proxy_pass http://45.145.65.245; # Или путь к папке вашего проекта
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Переадресация на HTTPS
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name девфлов.рф www.девфлов.рф;
+
+    ssl_certificate /path/to/fullchain.pem; # Укажите путь к вашему SSL-сертификату
+    ssl_certificate_key /path/to/privkey.pem;
+
+    location / {
+        proxy_pass http://45.145.65.245; # Или путь к папке вашего проекта
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}

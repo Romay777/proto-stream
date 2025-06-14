@@ -1,0 +1,35 @@
+.side-bar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  width: 245px;
+  height: calc(100vh - 50px);
+  background-color: var(--grey-color);
+  padding-left: 10px;
+  top: 50px; /* Отступ сверху */
+
+  overflow-y: auto;
+  //padding-top: 10px;
+  //justify-content: space-between;
+}
+
+.side-bar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Выравнивание по высоте */
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+
+.side-bar-header H3 {
+  margin: 0; /* Убираем отступы */
+  display: flex; /* Используем Flexbox */
+  align-items: center; /* Центрируем текст по вертикали */
+}
+
+.side-bar-header button {
+  margin: 0; /* Убираем отступы */
+  display: flex; /* Используем Flexbox */
+  align-items: center; /* Центрируем текст в кнопке */
+}

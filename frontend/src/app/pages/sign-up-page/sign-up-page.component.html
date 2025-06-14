@@ -1,0 +1,28 @@
+<div class="main-container">
+  <div>
+    <h1 class="mb64">
+      Sign Up
+    </h1>
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+    >
+      <div>
+        <label class="control-label mb16" for="username">Write your username
+          <input class="text-input" type="text" id="username" name="username" formControlName="username" placeholder="Enter username">
+        </label>
+      </div>
+      <div>
+        <label class="control-label mb16" for="email">Write your email
+          <input class="text-input" type="text" id="email" name="email" formControlName="email" placeholder="Enter email">
+        </label>
+      </div>
+      <div>
+        <label class="control-label mb32" for="password">Write your password
+          <input class="text-input" type="password" id="password" name="password" formControlName="password" placeholder="Enter password">
+        </label>
+      </div>
+      <button class="btn btn-shadow mb32" type="submit">Submit</button>
+    </form>
+  </div>
+</div>

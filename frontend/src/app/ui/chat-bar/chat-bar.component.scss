@@ -1,0 +1,62 @@
+.chat-bar {
+  position: fixed;
+  top: 50px; /* Отступ сверху */
+  right: 0; /* Привязка к правой части экрана */
+  width: 330px; /* Ширина контейнера */
+  height: calc(100vh - 50px); /* Высота минус отступ сверху */
+  background: var(--grey-color);
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.chat-bar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Выравнивание по высоте */
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+
+.chat-body {
+  flex: 1; /* Занимает всё оставшееся пространство */
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll; /* Постоянный скроллинг по оси Y */
+  height: 100%; /* Задаём высоту */
+}
+
+.chat-body::-webkit-scrollbar {
+  width: 8px; /* Ширина полосы прокрутки (дополнительно, для стилизации) */
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Цвет бегунка */
+  border-radius: 4px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  background: transparent; /* Фон для трека */
+}
+.chat-input {
+  padding: 10px; /* Внутренний отступ */
+  margin-bottom: 30px; /* Отступ от нижней границы экрана */
+}
+
+.chat-input-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-input {
+  flex: 1; /* Занимает все доступное пространство */
+  max-width: 280px; /* Максимальная ширина */
+  height: 36px; /* Высота поля ввода */
+  margin-right: 5px; /* Отступ между полем ввода и кнопкой */
+}
+
+.chat-input button {
+  width: 36px; /* Фиксированная ширина кнопки */
+  height: 36px; /* Фиксированная высота кнопки */
+}

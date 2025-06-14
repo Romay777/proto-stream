@@ -1,0 +1,28 @@
+env: "local" #local, prod
+#storage_path: "postgresql://postgres:qwerty@db:5432/proto-stream-db?sslmode=disable"
+
+#db:
+#  username: "postgres"
+#  host: "db"
+#  port: "5432"
+#  dbname: "proto-stream-db"
+#  sslmode: "disable"
+#  password: "qwerty"
+
+http_server:
+  address: "0.0.0.0:8082"
+  timeout: 4s
+  idle_timeout: 60s
+  cert_file: "/etc/ssl/certificate.crt"
+  key_file: "/etc/ssl/private.key"
+
+cors_origin:
+  - "http://localhost"
+
+cache:
+  ttl: 3600s
+
+auth:
+  access_token_ttl: 2m
+  refresh_token_ttl: 6m
+#  jwt_secret: "artyom"

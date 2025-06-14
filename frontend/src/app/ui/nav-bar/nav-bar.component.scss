@@ -1,0 +1,24 @@
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  //margin-bottom: 16px;
+  height: 50px;
+  align-items: center;
+  background-color: #8a7f8e;
+  //border-bottom: 1px solid var(--black-color);
+  position: absolute;
+  width: 100vw;
+}
+
+.search-bar-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-side-ui {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding-right: 5px;
+}

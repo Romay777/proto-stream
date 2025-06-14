@@ -1,0 +1,128 @@
+@import "margins";
+
+:root {
+  --dark-color: #343131;
+  --dark-secondary-color: #474343;
+  --secondary-color: #D8A25E;
+  --light-color: #EEDF7A;
+  --light-secondary-color: #E6E0B7;
+  --service-color: #D8A25E;
+  --grey-color: #999;
+  --black-color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Light", sans-serif;
+}
+
+.main-container {
+  display: inline-block;
+  //align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 25px;
+  //height: 100%;
+  //width: 300px;
+  padding: 25px;
+  //margin: auto auto;
+  justify-content: center;
+  //mso-border-shadow: yes;
+  width: 40%;
+
+  height: auto;
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  top: 25%;
+  left: 50%; /* Смещаем элемент на середину по горизонтали */
+  transform: translateX(-50%); /* Компенсируем смещение */
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Тень со смещением и размитием */
+}
+
+
+.btn {
+  width: 100%;
+  border: 1px solid var(--dark-secondary-color);
+  border-radius: 4px;
+  background: var(--service-color);
+  color: var(--dark-color);
+
+  padding: 10px 20px;
+  //-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  //-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+  height: 48px;
+  //padding: 10px;
+}
+
+.btn-shadow {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: -4px;
+    right: -4px;
+    background: var(--black-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    //border: 1px solid var(--dark-secondary-color);
+  }
+}
+
+
+.control-label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+}
+
+.text-input {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--black-color);
+  border-radius: 4px;
+
+  padding: 12px 20px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+
+  height: 48px;
+  background: var(--grey-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black-color);
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    var(--black-color);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    var(--black-color);
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    var(--black-color);
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    var(--black-color);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:    var(--black-color);
+}
+::placeholder { /* Most modern browsers support this now. */
+  color:    var(--black-color);
+}

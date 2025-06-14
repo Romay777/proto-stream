@@ -1,0 +1,19 @@
+<div class="chat-bar">
+  <div class="chat-bar-header">
+    <button type="button">hide</button>
+    <h3>Stream Chat</h3>
+  </div>
+  <div class="chat-body">
+    <div *ngFor="let msg of messages">
+      <p><b>{{ msg.username }}:</b></p>
+      <p>{{ msg.message }}</p>
+      <p>{{ msg.timestamp }}</p>
+    </div>
+  </div>
+  <div class="chat-input">
+    <form class="chat-input-form" (submit)="sendMessage(); $event.preventDefault();">
+      <input class="text-input" [(ngModel)]="message" name="message" type="text" placeholder="Type your message" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>

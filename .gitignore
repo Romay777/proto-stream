@@ -1,0 +1,10 @@
+.idea/
+.database/
+
+/secret
+/secret.pub
+
+frontend/.gitignore
+
+.env
+.env.prod
